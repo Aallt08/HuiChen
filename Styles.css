@@ -1,7 +1,7 @@
 /*index.html*/
 @font-face {
   font-family: "LXGWWenKai";
-  src: url("fonts/LXGWWenKai.ttf") format("truetype");
+  src: url("fonts/LXGWWenKai.woff") format("woff");
   font-display: swap;
 }
 
