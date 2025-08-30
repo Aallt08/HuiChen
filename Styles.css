@@ -1,0 +1,246 @@
+/*index.html*/
+@font-face {
+  font-family: "LXGWWenKai";
+  src: url("fonts/LXGWWenKai.ttf") format("truetype");
+  font-display: swap;
+}
+
+:root {
+  --color-black: #000000;
+  --color-darkest: #1a1a1a;
+  --color-darker: #333333;
+  --color-dark: #4d4d4d;
+  --color-mid-dark: #666666;
+  --color-mid: #808080;
+  --color-mid-light: #999999;
+  --color-light: #b3b3b3;
+  --color-lighter: #cccccc;
+  --color-lightest: #e6e6e6;
+  --color-white: #ffffff;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 60px;
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0 20px;
+  font-size: 25px;
+  background: linear-gradient(135deg, var(--color-darkest), var(--color-darker), var(--color-dark), var(--color-mid-dark), var(--color-mid), var(--color-mid-light), var(--color-light),
+  var(--color-lighter), var(--color-lightest));
+  background-size: 800% 800%;
+  animation: gradient 6s ease-in-out infinite;
+}
+
+body {
+  font-family: "LXGWWenKai", system-ui, sans-serif;
+  line-height: 1.6;
+  background-color: var(--color-lightest);
+}
+
+header h1 {
+  animation: bounce 3s ease-in-out infinite;
+}
+
+header p {
+  animation: bounce 3s ease-in-out infinite;
+  animation-delay: 0.2s;
+}
+
+.main_nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: var(--color-darker);
+}
+
+.main_nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 15px 0;
+  list-style: none;
+  font-size: 20px;
+  text-align: center;
+}
+
+.main_nav a {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: var(--color-lighter);
+}
+
+.main_nav a:hover {
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--color-white);
+}
+
+.images_scene {
+  margin: 10px;
+}
+
+.images_scene img {
+  width: 100%;
+  height: auto;
+  border: 10px solid var(--color-lightest);
+  border-radius: 20px;
+  box-shadow: 0 0 20px var(--color-black);
+}
+
+section {
+  margin: 32px auto;
+  padding: 32px;
+  border-radius: 20px;
+  background-color: var(--color-white);
+  box-shadow: 0 0 20px var(--color-black);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 2s ease-in-out;
+}
+
+section:hover {
+  transform: translateY(-3px);
+  box-shadow: none;
+}
+
+h2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 2px solid var(--color-darkest);
+}
+
+.jump_btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 6px 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--color-white);
+  background-color: var(--color-darker);
+}
+
+.learn_icon, .contact_icon {
+  margin: 5px;
+  font-size: 24px;
+}
+
+footer {
+  padding: 10px;
+  text-align: center;
+  color: var(--color-darker);
+  background-color: var(--color-lightest);
+}
+
+/*resource.html*/
+.back_to_top {
+  position: fixed;
+  right: 20px;
+  bottom: 80px;
+  z-index: 999999;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--color-darker);
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.back_home {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 999999;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--color-darker);
+  font-size: 24px;
+  text-decoration: none;
+}
+
+h3 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid var(--color-lightest);
+}
+.resource_card {
+  margin-top: 20px;
+  padding: 20px;
+  border-left: 5px solid var(--color-black);
+  border-radius: 15px;
+  box-shadow: 0 0px 10px var(--color-black);
+}
+
+.resource_card p {
+  margin: 5px;
+  font-style: italic;
+  color: var(--color-mid-light);
+}
+
+.tip_tag {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 2px 6px;
+  border-radius: 5px;
+  font-size: 10px;
+  color: var(--color-white);
+  background-color: var(--color-black);
+}
+
+.stars_container {
+  margin: 5px 0;
+  color: var(--color-black);
+}
